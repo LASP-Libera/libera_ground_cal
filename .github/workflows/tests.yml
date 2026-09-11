@@ -1,0 +1,57 @@
+name: tests
+
+# Runs on every pull request into main, and on main itself after a merge.
+# Pushes to other branches are not built - work in progress on a feature
+# branch should not burn CI minutes until it is proposed for main.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    # Each subdirectory of this repository is an independent project with its
+    # own Poetry environment, so everything runs from inside radiometers/.
+    defaults:
+      run:
+        working-directory: radiometers
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Keep the virtualenv in the project directory
+        run: poetry config virtualenvs.in-project true
+
+      # Keyed on the lock file, so only a dependency change pays the full
+      # install cost. The path is repo-relative, unlike the run steps above.
+      - name: Cache the virtualenv
+        uses: actions/cache@v4
+        with:
+          path: radiometers/.venv
+          key: venv-${{ runner.os }}-py311-${{ hashFiles('radiometers/poetry.lock') }}
+
+      # Catches pyproject.toml and poetry.lock drifting apart, which otherwise
+      # surfaces as a confusing "poetry install" failure for whoever clones
+      # next. This exact thing was missed once already, after ipywidgets was
+      # added without re-locking.
+      - name: Check pyproject.toml and poetry.lock agree
+        run: poetry check
+
+      - name: Install dependencies
+        run: poetry install --no-interaction
+
+      # -m "" clears the "not slow" default in pytest.ini. That default keeps
+      # the local loop fast; in CI the whole suite is only a couple of seconds,
+      # so there is no reason to skip the diffraction FFT test here.
+      - name: Run tests
+        run: poetry run pytest -m "" -v
