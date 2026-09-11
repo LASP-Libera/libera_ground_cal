@@ -1,0 +1,5 @@
+channel_name,channel_enum,module_sn,carrier_sn,chip_sn,detector_pcb,collection_area,collection_area_sd,solid_angle,solid_angle_sd,substrate_temp_offset,nw_per_dn_t0,nw_per_dn0,nw_per_dn1,nw_per_dn2,nw_per_dn3,nw_per_dn4,nw_per_dn5,optical_electrical_inequiv_percent
+sw,0,7,14,6g.06,sn04,1.6181E-04,5.00E-07,7.6549E-04,1.16E-05,0,34.00,31.978685,5.442404e-04,-3.372524e-05,1.472927e-02,-8.655094e-03,-1.087891e-03,1.52
+total,1,8,22,6g.02,sn01,1.6084E-04,5.40E-07,7.6986E-04,1.16E-05,0,34.00,32.092187,5.312841e-04,-3.491208e-05,1.384798e-02,-8.083757e-03,-1.069344e-03,1.32
+lw,2,3,21,6g.04,sn02,1.6121E-04,1.00E-06,7.6212E-04,1.16E-05,0,34.00,32.828660,5.693870e-04,-3.700489e-05,1.422352e-02,-8.167940e-03,-1.107112e-03,2.15
+ssw,3,5,23,6g.05,sn03,1.6056E-04,5.00E-07,7.6785E-04,1.16E-05,0,34.00,32.655269,5.476286e-04,-3.411099e-05,1.501601e-02,-8.908572e-03,-1.109455e-03,1.73

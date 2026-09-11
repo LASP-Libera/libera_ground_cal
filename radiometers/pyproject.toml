@@ -1,0 +1,40 @@
+[tool.poetry]
+package-mode = false
+
+[project]
+name = "libera_radiometer_ground_calibrations"
+version = "0.0.1"
+description = "Analysis of Libera Ground Calibration Data"
+requires-python = ">=3.11,<4"
+dynamic = ["dependencies"]
+license = "BSD-3-Clause"
+authors = [
+    { name = "Dave Harber"},
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4"
+cloudpathlib = ">=0.14.0,<1.0"
+libera-utils = ">=5.8.4,<6.0.0"
+xarray = ">=2025.10.1"
+netcdf4 = ">=1.7.0,<2.0"
+pandas = ">=2.0, <3.0"
+scipy = ">=1.7.0, <2.0"
+pydantic = ">2.0.3, <3.0"
+matplotlib = ">=3.5.0, <4.0"
+astropy = ">=7.2.0,<8.0.0"
+ipykernel = ">=6.4.1,<7.0.0"
+jupyter = ">=1.0.0,<2.0.0"
+mplcursors = ">=0.5.2,<1.0"
+ipympl = "^0.10.0"
+scikit-learn = "^1.9.0"
+lmfit = "^1.3.4"
+python-pptx = "^1.0.2"
+img2pdf = "^0.6.3"
+ipywidgets = "^8.1"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)"
+]

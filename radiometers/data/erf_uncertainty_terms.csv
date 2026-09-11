@@ -1,0 +1,24 @@
+term,description,class,low_level,session_variable,type,source
+u_pbrr_vref,PBR-R reference voltage,Common,0,0,B,3458a voltage meter
+u_pbrr_rhtr,PBR-R detector heater resistor,Common,0,0,B,Resistance measurement
+u_pbrr_rtop,PBR-R top resistor,Common,0,0,B,Resistance measurement
+u_pbrr_rtrace, PBR-R trace resistance,Common,0,0,B,Resistance measurement
+u_pbrr_nonequiv,PBR-R detector optical-electrical non-equivalence,Common,0,0,B,COMSOL modeling
+u_pbrr_nonlinear,PBR-R eletrical non-linearity,Common,0,0,B,Voltage measurement
+u_pbrr_det_ap,PBR-R detector aperture area,Common,0,0,B,NIST aperture area facility
+u_pbrr_ent_ap,PBR-R entrance aperture area,Common,0,0,B,NIST aperture area facility
+u_pbrr_ap_d,PBR-R aperture separation,Common,0,0,B,Length measurement at LASP
+u_pbrr_ap_align,PBR-R aperture alignment,Common,0,0,B,Tolerence stackup
+u_pbrr_stray,PBR-R stray light,Common,0,0,B,Estimate
+u_pbrr_vacnt,PBR-R VACNT total hemisperhical reflectivity,Wavelength,0,0,B,THR measurements at LASP
+u_pbrr_det_ap_diff,PBR-R detector aperture diffraction loss,Wavelength,0,0,B,10% uncertainty on diffraction model
+u_pbrr_ent_ap_diff,PBR-R entrance aperture diffraction loss,Wavelength,0,0,B,10% uncertainty on diffraction model
+u_resp_noise_{ch},Statistical uncertainty of the science radiometer response,Random,1,0,A,Measurement analysis
+u_wavelength_dsrf_dwl_{ch},Spectral response uncertainty from wavelength measurement uncertainty,Random,1,0,B,Wavelength measurement uncertainty times SRF slope
+u_wavelength_dsrf_dwl_ir_{ch},Spectral response uncertainty from systematic IR wavelength scale error (OSA/radiometer beam sampling; spatial chirp suspected),Wavelength,0,0,B,IR measurement error times SRF slope
+u_ssw_edge_temp_{ch},Spectral response uncertainty from the temperature correction of the SSW AMTIR-1 filter edge,Wavelength,0,0,B,Measured edge temperature sensitivity
+u_random_{ch},"SRF fit uncertainty, combines u_resp_noise_{ch}, u_wavelength_dsrf_dwl_{ch} and measurement scatter",Random,0,0,A,Uncertainty from SRF fit
+u_scirad_nonlinear_{ch},Science radiometer eletrical non-linearity,Common,0,0,B,Detector level testing
+u_scirad_out_of_field_{ch},Science radiometer ERF out of field,Wavelength,0,0,B,Science radiometer scatter light analysis
+u_spatial_unif,Radiance source spatial non-uniformity,Wavelength,0,1,B,Measurement analysis
+u_angular_unif,Radiance source angular non-uniformity,Wavelength,0,1,B,Measurement analysis

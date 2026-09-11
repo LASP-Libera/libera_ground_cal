@@ -1,0 +1,10 @@
+[paths]
+erf_osa_spectrum_dir = '/Data/Libera/ERF/ERF/OSA/LabView Spectra/'
+erf_ccs_spectrum_dir = '/Data/Libera/ERF/ERF/CCS200 Spectra/'
+erf_grating_spectrum_dir = '/Data/Libera/ERF/ERF/Grating Spectra/'
+erf_log_file_dir = '/Data/Libera/ERF/ERF/ERF Log FIles/'
+erf_misc_file_dir = '/Data/Libera/ERF/ERF/Misc/'
+erf_ceres_scene_dir = '/Data/CERES Spectral Scenes/MODTRAN filtered radiance spectra/'
+figure_dir = 'figures/'
+analysis_dir = 'data/'
+conversions_and_calibrations_dir = 'conversions_and_calibrations/'

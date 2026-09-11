@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+*.egg-info/
+.DS_Store
+config.toml
+.claude/
+figures/
+CLAUDE.md
+.vscode/settings.json
